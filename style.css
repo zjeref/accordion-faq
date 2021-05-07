@@ -29,15 +29,9 @@ body {
   padding: 0 10px;
 }
 
-.logo {
-  height: 200px;
-}
-
 .img {
   background-image: url(./images/illustration-woman-online-mobile.svg);
-
-  height: 100%;
-
+  height: 200px;
   background-repeat: no-repeat;
   z-index: 1;
   margin: -110px auto 0 7px;
@@ -48,8 +42,7 @@ body {
   background-image: url(./images/bg-pattern-mobile.svg);
   text-align: center;
   background-repeat: no-repeat;
-  max-height: 110px;
-  height: 100%;
+  height: 100px;
   z-index: 0;
   margin: -90px auto 0 33px;
 }
@@ -62,7 +55,7 @@ body {
 }
 
 .accordian {
-  margin: -6em 0 5em 0;
+  margin: 1em 0 5em 0;
   max-width: 425px;
 }
 
@@ -105,30 +98,22 @@ body {
 }
 
 @media (min-width: 720px) {
-  .container {
-    z-index: 1;
-  }
-
   .card {
     flex-direction: row;
     width: 70%;
     max-width: 1200px;
-    z-index: -1;
-  }
-  .accordian {
-    margin: 4em 0 5em 0;
-  }
-  .logo {
-    width: 500px;
-    height: 500px;
-    z-index: -5;
+    padding: 0 10px 0 0;
+    z-index: 1;
   }
 
+  .logo {
+    overflow: hidden;
+  }
   .img {
     background-image: url(./images/illustration-woman-online-desktop.svg);
-    height: 100%;
     background-repeat: no-repeat;
-    z-index: 1;
+    width: 500px;
+    height: 450px;
     margin: 50px 0 0 -50px;
     text-align: center;
   }
@@ -137,9 +122,28 @@ body {
     background-image: url(./images/bg-pattern-desktop.svg);
     text-align: center;
     background-repeat: no-repeat;
-    max-height: 110px;
-    height: 100%;
-    z-index: 0;
+    height: 800px;
+    width: 800px;
+    background-size: 100%;
     position: relative;
+    margin: -709px 0 -134px -379px;
+    z-index: -3;
+  }
+
+  .card::before {
+    content: url(./images/illustration-box-desktop.svg);
+    position: absolute;
+    top: 400px;
+    left: 126px;
+    z-index: 10;
+  }
+
+  #head {
+    text-align: start;
+    margin-left: 10px;
+  }
+
+  .accordian {
+    padding-top: 50px;
   }
 }

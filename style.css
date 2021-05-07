@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.container {
+  height: 98%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  font-size: 0.75rem;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  margin: 150px auto;
+  background-color: white;
+  border-radius: 23px;
+  padding: 0 10px;
+}
+
+.logo {
+  height: 200px;
+}
+
+.img {
+  background-image: url(./images/illustration-woman-online-mobile.svg);
+
+  height: 100%;
+
+  background-repeat: no-repeat;
+  z-index: 1;
+  margin: -110px auto 0 7px;
+  text-align: center;
+}
+
+.shadow {
+  background-image: url(./images/bg-pattern-mobile.svg);
+  text-align: center;
+  background-repeat: no-repeat;
+  max-height: 110px;
+  height: 100%;
+  z-index: 0;
+  margin: -90px auto 0 33px;
+}
+
+#head {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0.5em 0;
+}
+
+.accordian {
+  margin: -6em 0 5em 0;
+  max-width: 425px;
+}
+
+.accordion-items {
+  padding: 10px;
+  font-size: 0.9rem;
+  color: hsl(240, 6%, 50%);
+  border-bottom: 1px solid grey;
+  border-image: linear-gradient(to right, transparent, grey, transparent) 1;
+}
+
+.accordion-item-header {
+  font-size: 0.95rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.accordion-item-header::after {
+  content: url(./images/icon-arrow-down.svg);
+  position: absolute;
+  right: 0.2rem;
+  transition-property: transform;
+  transition-duration: 0.5s;
+}
+
+.accordion-active {
+  color: hsl(237, 12%, 33%);
+  font-weight: 700;
+}
+
+.accordion-active::after {
+  content: url(./images/icon-arrow-down.svg);
+  transform: rotate(180deg);
+}
+
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s ease max-height;
+}
+
+@media (min-width: 720px) {
+  .container {
+    z-index: 1;
+  }
+
+  .card {
+    flex-direction: row;
+    width: 70%;
+    max-width: 1200px;
+    z-index: -1;
+  }
+  .accordian {
+    margin: 4em 0 5em 0;
+  }
+  .logo {
+    width: 500px;
+    height: 500px;
+    z-index: -5;
+  }
+
+  .img {
+    background-image: url(./images/illustration-woman-online-desktop.svg);
+    height: 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+    margin: 50px 0 0 -50px;
+    text-align: center;
+  }
+
+  .shadow {
+    background-image: url(./images/bg-pattern-desktop.svg);
+    text-align: center;
+    background-repeat: no-repeat;
+    max-height: 110px;
+    height: 100%;
+    z-index: 0;
+    position: relative;
+  }
+}
